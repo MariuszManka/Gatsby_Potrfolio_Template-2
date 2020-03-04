@@ -31,7 +31,7 @@ export const HomePage = () => {
 
   return (
     <>
-      <HomeWrapper>
+      <HomeWrapper id="contact">
         <Overlay />
         <HeroImage homeImage fluid={homeheroimage.fluid} />
         <HomeParagraph>{homeparagraph}</HomeParagraph>

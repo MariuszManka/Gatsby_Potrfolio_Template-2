@@ -13,7 +13,6 @@ export const HomeWrapper = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
 `
 
 export const HomeHeading = styled(Heading)`
