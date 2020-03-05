@@ -9,13 +9,16 @@ export const PortfolioWrapper = styled.section`
   left: 0;
   z-index: 5;
   width: 100%;
-  height: 100vh;
   background: url(${({ background }) => background});
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
   background-attachment: fixed;
-  padding: 100px 0;
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20% 1fr;
+  grid-template-areas: "header header header" "cards cards cards";
 `
 export const PortfolioParagraph = styled(Paragraph)`
   /* color: #646d6e; */

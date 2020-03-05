@@ -18,6 +18,7 @@ const theme = {
     secondary: `'Raleway', sans-serif`,
   },
   menuSize: "75px",
+  cardBorderRadius: "6px 6px 0 0",
 }
 
 export default theme

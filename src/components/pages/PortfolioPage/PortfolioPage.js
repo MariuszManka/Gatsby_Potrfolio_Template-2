@@ -6,6 +6,7 @@ import {
   PortfolioParagraph,
   Overlay,
 } from "./StyledPortfolioPage"
+import Cards from "src/components/molecules/Cards/Cards"
 
 export const Portfolio = graphql`
   {
@@ -33,11 +34,15 @@ export const PortfolioPage = () => {
 
   return (
     <PortfolioWrapper background={portfoliobackground.fluid.src} id="portfolio">
-      <Overlay />
-      <PortfolioHeading dark>{portfolioheading}</PortfolioHeading>
-      <PortfolioParagraph size={"2.5rem"}>
-        {portfolioparagraph}
-      </PortfolioParagraph>
+      <Overlay style={{ gridArea: "header cards" }} />
+      <div style={{ gridArea: "header" }}>
+        <PortfolioHeading dark>{portfolioheading}</PortfolioHeading>
+        <PortfolioParagraph size={"2.5rem"}>
+          {portfolioparagraph}
+        </PortfolioParagraph>
+      </div>
+
+      <Cards />
     </PortfolioWrapper>
   )
 }
