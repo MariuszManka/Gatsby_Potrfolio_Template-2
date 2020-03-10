@@ -8,7 +8,9 @@ const Paragraph = styled.p`
   padding: 0;
   font-size: ${({ size, theme }) => (size ? size : theme.sizes.paragraph)};
   font-family: ${({ theme }) => theme.fonts.secondary};
-  color: ${({ theme, dark }) =>
-    dark ? theme.colors.black : theme.colors.white};
+  color: ${({ theme, dark, light, main }) =>
+    (dark && theme.colors.black) ||
+    (light && theme.colors.white) ||
+    (main && theme.colors.paragraph)};
 `
 export default Paragraph

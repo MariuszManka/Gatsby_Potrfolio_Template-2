@@ -30,19 +30,26 @@ module.exports = {
         ],
       },
     },
+
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: ["material icons", "roboto:300,400,500,700"],
+      },
+    },
     {
       resolve: `gatsby-source-datocms`,
       options: {
         apiToken: process.env.API_KEY,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/assets/images`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
 
     {
       resolve: `gatsby-plugin-manifest`,

@@ -31,11 +31,11 @@ export const HomePage = () => {
 
   return (
     <>
-      <HomeWrapper id="contact">
+      <HomeWrapper id="home">
         <Overlay />
         <HeroImage homeImage fluid={homeheroimage.fluid} />
-        <HomeParagraph>{homeparagraph}</HomeParagraph>
-        <HomeHeading>{homeheading}</HomeHeading>
+        <HomeParagraph light>{homeparagraph}</HomeParagraph>
+        <HomeHeading light>{homeheading}</HomeHeading>
       </HomeWrapper>
     </>
   )

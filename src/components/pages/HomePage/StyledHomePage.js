@@ -5,6 +5,7 @@ import Paragraph from "src/components/atoms/Paragraph/Paragraph"
 export const HomeWrapper = styled.main`
   position: relative;
   top: 0;
+  height: 100vh;
   left: 0;
   z-index: 5;
   width: 100%;

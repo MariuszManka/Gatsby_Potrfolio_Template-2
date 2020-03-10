@@ -34,9 +34,6 @@ const Cards = () => {
   const {
     allDatoCmsCard: { nodes },
   } = cards
-
-  console.log(nodes[0].card)
-
   return (
     <CardWrapper>
       {nodes[0].card.map(card => {

@@ -3,6 +3,7 @@ const theme = {
     primary: "#735C32",
     white: "#F3F5F5",
     black: "#182426",
+    paragraph: "#b2bec3;",
   },
 
   sizes: {

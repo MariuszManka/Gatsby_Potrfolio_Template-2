@@ -3,7 +3,6 @@ import React from "react"
 import GlobalStyle from "src/assets/globalStyles/globalStyle"
 import { ThemeProvider } from "styled-components"
 import theme from "src/assets/globalStyles/theme"
-import Wrapper from "src/components/templates/Wrapper/Wrapper"
 import Menu from "src/components/organisms/Menu/Menu"
 
 const MainLayout = ({ children }) => {

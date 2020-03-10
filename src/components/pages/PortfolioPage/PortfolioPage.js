@@ -37,7 +37,7 @@ export const PortfolioPage = () => {
       <Overlay style={{ gridArea: "header cards" }} />
       <div style={{ gridArea: "header" }}>
         <PortfolioHeading dark>{portfolioheading}</PortfolioHeading>
-        <PortfolioParagraph size={"2.5rem"}>
+        <PortfolioParagraph light size={"2.5rem"}>
           {portfolioparagraph}
         </PortfolioParagraph>
       </div>

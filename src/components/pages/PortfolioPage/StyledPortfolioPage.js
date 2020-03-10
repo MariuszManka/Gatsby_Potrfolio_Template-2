@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import Heading from "src/components/atoms/Heading/Heading"
 import Paragraph from "src/components/atoms/Paragraph/Paragraph"
-import { Portfolio } from "./PortfolioPage"
 
 export const PortfolioWrapper = styled.section`
   position: relative;
@@ -39,8 +38,8 @@ export const Overlay = styled.div`
   z-index: 20;
   background-image: linear-gradient(
     180deg,
-    #f8f9fa 12.24%,
-    rgba(255, 255, 255, 0) 65%
+    #f8f9fa 7%,
+    rgba(255, 255, 255, 0) 45%
   );
   background-attachment: fixed;
 `

@@ -13,18 +13,17 @@ export const CardWrapper = styled.div`
   grid-template-columns: repeat(3, 270px);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 110px;
-  grid-row-gap: 50px;
+  grid-row-gap: 80px;
   justify-content: center;
   width: 100%;
   margin: 5% 0 10% 0;
-  box-shadow: 18px 21px 39px -12px rgba(24, 36, 38, 1);
 `
 export const Card = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.cardBorderRadius};
 `
 export const CardContent = styled.div`
-  padding: 25px 35px;
+  padding: 25px 15px;
 `
 export const CardLine = styled.div`
   height: 3px;
