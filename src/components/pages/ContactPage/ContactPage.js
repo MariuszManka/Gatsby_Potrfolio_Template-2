@@ -29,7 +29,13 @@ export const Contact = graphql`
 
 const Form = () => {
   return (
-    <FormWrapper action="https://formspree.io/mnqvrker" method="POST">
+    <FormWrapper
+      data-sal-duration="700"
+      data-sal="slide-left"
+      data-sal-easing="ease-out-back"
+      action="https://formspree.io/mnqvrker"
+      method="POST"
+    >
       <Input type="text" name="Name" placeholder="Name" iconName="person" />
       <Input
         type="email"
@@ -56,12 +62,30 @@ export const ContactPage = () => {
 
   return (
     <StyledContactPage id="contact">
-      <Heading dark>{contactheading}</Heading>
-      <Paragraph main size={"2.5rem"}>
+      <Heading
+        data-sal-duration="700"
+        data-sal="fade"
+        data-sal-easing="ease-out-back"
+        dark
+      >
+        {contactheading}
+      </Heading>
+      <Paragraph
+        data-sal-duration="700"
+        data-sal="slide-up"
+        data-sal-easing="ease-out-back"
+        main
+        size={"2.5rem"}
+      >
         {contactparagraph}
       </Paragraph>
       <Shape url={background.url} />
-      <Image src={contactimage.url} />
+      <Image
+        data-sal-duration="700"
+        data-sal="slide-up"
+        data-sal-easing="ease-out-back"
+        src={contactimage.url}
+      />
       <Form />
     </StyledContactPage>
   )

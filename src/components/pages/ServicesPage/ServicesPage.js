@@ -11,6 +11,7 @@ import {
   Shape,
 } from "./StyledServicesPage"
 import Icon from "src/assets/icon/Icon"
+// import { useLax, useLaxElement } from "use-lax"
 
 export const Services = graphql`
   {
@@ -39,26 +40,62 @@ export const ServicesPage = () => {
     allDatoCmsService: { nodes },
   } = service
 
+  // useLax()
+  // const ref = useLaxElement()
+
   const { id, serviceparagraph, serviceheading, card, shape } = nodes[1]
-  console.log(shape.url)
 
   return (
     <ServicesWrapper id="services">
       <Shape src={shape.url} />
       <InnerWrapper>
-        <Heading dark>{serviceheading}</Heading>
-        <Paragraph size={"2.5rem"} main>
+        <Heading
+          data-sal-duration="700"
+          data-sal="fade"
+          data-sal-easing="ease-out-back"
+          dark
+        >
+          {serviceheading}
+        </Heading>
+        <Paragraph
+          data-sal-duration="700"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-back"
+          size={"2.5rem"}
+          main
+        >
           {serviceparagraph}
         </Paragraph>
         <CardWrapper>
           {card.map(card => {
             return (
-              <ContentWrapper key={card.id}>
-                <IconWrapper>
+              <ContentWrapper>
+                <IconWrapper
+                  data-sal-duration="700"
+                  data-sal="slide-left"
+                  data-sal-delay="200"
+                  data-sal-easing="ease-out-back"
+                >
                   <Icon color="white" md={75} name={card.iconname} />
                 </IconWrapper>
-                <Heading size={"2.5rem"}>{card.heading}</Heading>
-                <Paragraph size={"1.8rem"}>{card.content}</Paragraph>
+                <Heading
+                  data-sal-duration="700"
+                  data-sal="slide-up"
+                  data-sal-delay="600"
+                  data-sal-easing="ease-out-back"
+                  size={"2.5rem"}
+                >
+                  {card.heading}
+                </Heading>
+                <Paragraph
+                  key={card.key}
+                  data-sal="slide-up"
+                  data-sal-delay="600"
+                  data-sal-easing="ease-out-back"
+                  size={"1.8rem"}
+                >
+                  {card.content}
+                </Paragraph>
               </ContentWrapper>
             )
           })}

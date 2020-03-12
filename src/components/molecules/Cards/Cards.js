@@ -38,7 +38,12 @@ const Cards = () => {
     <CardWrapper>
       {nodes[0].card.map(card => {
         return (
-          <Card key={card.id}>
+          <Card
+            data-sal-duration="700"
+            data-sal="slide-up"
+            data-sal-easing="ease-out-back"
+            key={card.id}
+          >
             <StyledImage fluid={card.cardimage.fluid} />
             <CardContent>
               <Heading dark size={"3rem"}>

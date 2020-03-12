@@ -21,7 +21,7 @@ export const Image = styled.img`
   position: absolute;
   z-index: 5;
   height: 45vh;
-  bottom: 45%;
+  bottom: 25%;
   transform: translateY(50%);
   left: 5%;
 `

@@ -36,8 +36,21 @@ export const PortfolioPage = () => {
     <PortfolioWrapper background={portfoliobackground.fluid.src} id="portfolio">
       <Overlay style={{ gridArea: "header cards" }} />
       <div style={{ gridArea: "header" }}>
-        <PortfolioHeading dark>{portfolioheading}</PortfolioHeading>
-        <PortfolioParagraph light size={"2.5rem"}>
+        <PortfolioHeading
+          data-sal-duration="700"
+          data-sal="fade"
+          data-sal-easing="ease-out-back"
+          dark
+        >
+          {portfolioheading}
+        </PortfolioHeading>
+        <PortfolioParagraph
+          data-sal-duration="700"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-back"
+          light
+          size={"2.5rem"}
+        >
           {portfolioparagraph}
         </PortfolioParagraph>
       </div>
