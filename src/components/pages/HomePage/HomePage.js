@@ -23,7 +23,10 @@ export const Home = graphql`
   }
 `
 
-export const HomePage = () => {
+export const HomePage = props => {
+  // const form = context.useContext()
+
+  console.log(props)
   const home = useStaticQuery(Home)
   const {
     datoCmsHome: { homeparagraph, homeheading, homeheroimage },
@@ -34,8 +37,22 @@ export const HomePage = () => {
       <HomeWrapper id="home">
         <Overlay />
         <HeroImage homeImage fluid={homeheroimage.fluid} />
-        <HomeParagraph light>{homeparagraph}</HomeParagraph>
-        <HomeHeading light>{homeheading}</HomeHeading>
+        <HomeParagraph
+          data-sal-duration="700"
+          data-sal="fade"
+          data-sal-easing="ease-out-back"
+          light
+        >
+          {homeparagraph}
+        </HomeParagraph>
+        <HomeHeading
+          data-sal-duration="700"
+          data-sal="fade"
+          data-sal-easing="ease-out-back"
+          light
+        >
+          {homeheading}
+        </HomeHeading>
       </HomeWrapper>
     </>
   )

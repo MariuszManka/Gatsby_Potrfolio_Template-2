@@ -11,17 +11,18 @@ import Heading from "src/components/atoms/Heading/Heading"
 import Paragraph from "src/components/atoms/Paragraph/Paragraph"
 
 export const CardsQuery = graphql`
-  {
+  query getAllCards {
     allDatoCmsCard {
       nodes {
         card {
+          cardcontent
+          cardheading
           cardimage {
             fluid(maxWidth: 300, maxHeight: 200) {
               ...GatsbyDatoCmsFluid_tracedSVG
             }
           }
-          cardheading
-          cardcontent
+          slug
         }
       }
     }
@@ -34,6 +35,7 @@ const Cards = () => {
   const {
     allDatoCmsCard: { nodes },
   } = cards
+
   return (
     <CardWrapper>
       {nodes[0].card.map(card => {
@@ -43,6 +45,7 @@ const Cards = () => {
             data-sal="slide-up"
             data-sal-easing="ease-out-back"
             key={card.id}
+            to={card.slug}
           >
             <StyledImage fluid={card.cardimage.fluid} />
             <CardContent>

@@ -7,6 +7,7 @@ const Heading = styled.h1`
   letter-spacing: 1px;
   margin: 0 auto;
   padding: 0;
+  letter-spacing: 2px;
   font-size: ${({ size, theme }) => (size ? size : theme.sizes.heading)};
   font-family: ${({ theme }) => theme.fonts.primary};
   color: ${({ theme, dark, light, main }) =>

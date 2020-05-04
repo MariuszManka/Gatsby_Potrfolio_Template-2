@@ -76,7 +76,7 @@ export const ServicesPage = () => {
                   data-sal-delay="200"
                   data-sal-easing="ease-out-back"
                 >
-                  <Icon color="white" md={75} name={card.iconname} />
+                  <Icon color="white" md={"75px"} name={card.iconname} />
                 </IconWrapper>
                 <Heading
                   data-sal-duration="700"

@@ -6,14 +6,17 @@ import {
   ContactPage,
   ServicesPage,
 } from "src/components/pages/PagesExport"
+import { ContextProvider } from "src/GlobalContext/GlobalProvider"
 
 const IndexPage = () => (
-  <MainLayout>
-    <HomePage />
-    <ServicesPage />
-    <PortfolioPage />
-    <ContactPage />
-  </MainLayout>
+  <ContextProvider>
+    <MainLayout>
+      <HomePage />
+      <ServicesPage />
+      <PortfolioPage />
+      <ContactPage />
+    </MainLayout>
+  </ContextProvider>
 )
 
 export default IndexPage

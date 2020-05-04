@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Image from "gatsby-image"
+import { Link } from "gatsby"
 
 export const StyledImage = styled(Image)`
   /* width: 295px;*/
@@ -18,7 +19,9 @@ export const CardWrapper = styled.div`
   width: 100%;
   margin: 5% 0 10% 0;
 `
-export const Card = styled.div`
+export const Card = styled(Link)`
+  display: block;
+  z-index: 100;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.cardBorderRadius};
 `

@@ -11,16 +11,15 @@ import styled from "styled-components"
 export const StlyedIcon = styled.i`
   font-family: "Material Icons";
   cursor: pointer;
-  font-size: ${({ md }) => md && `${md}px`};
+  font-size: ${({ md }) => md && `${md}`};
   color: ${({ theme, color }) => color && theme.colors[color]};
 
   ${({ theme, contact }) =>
     contact &&
     `
- 
-	position: absolute;
-	bottom: 18px;
-	right: 5px; 
-	z-index: 10;
+	    position: absolute;
+	    bottom: 18px;
+	    right: 5px; 
+      z-index: 10;
   `};
 `

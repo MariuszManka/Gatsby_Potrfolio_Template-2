@@ -27,11 +27,12 @@ export const Button = styled.button`
   border: none;
   background-color: transparent;
   user-select: none;
-  & i {
+  & a {
     transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-right: 8px;
   }
 
-  & i:hover {
+  & a:hover {
     transform: scale(1.2);
   }
 `
@@ -45,7 +46,14 @@ const TextArea = ({ name, ...other }) => {
         rows={other.rows}
       ></StyledTextArea>
       <Button>
-        <Icon name="send" md={35} color="primary" contact />
+        <Icon
+          as={"a"}
+          href="mailto: mariuszmanka2@gmail.com"
+          name="send"
+          md={"35px"}
+          color="primary"
+          contact
+        />
       </Button>
     </InputWrapper>
   )

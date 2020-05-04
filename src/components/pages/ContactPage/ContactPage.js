@@ -29,20 +29,9 @@ export const Contact = graphql`
 
 const Form = () => {
   return (
-    <FormWrapper
-      data-sal-duration="700"
-      data-sal="slide-left"
-      data-sal-easing="ease-out-back"
-      action="https://formspree.io/mnqvrker"
-      method="POST"
-    >
+    <FormWrapper>
       <Input type="text" name="Name" placeholder="Name" iconName="person" />
-      <Input
-        type="email"
-        name="_replyto"
-        placeholder="E-mail"
-        iconName="email"
-      />
+      <Input type="email" placeholder="E-mail" iconName="email" />
       <TextArea name="Message" placeholder="Be in touch..." rows="10" />
     </FormWrapper>
   )
