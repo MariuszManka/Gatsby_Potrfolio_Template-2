@@ -18,6 +18,9 @@ export const PortfolioWrapper = styled.section`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 20% 1fr;
   grid-template-areas: "header header header" "cards cards cards";
+  @media ${({ theme }) => theme.devices.mobileS} {
+    display: none;
+  }
 `
 export const PortfolioParagraph = styled(Paragraph)`
   /* color: #646d6e; */

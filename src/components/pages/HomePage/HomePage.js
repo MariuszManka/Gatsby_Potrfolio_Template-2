@@ -24,9 +24,6 @@ export const Home = graphql`
 `
 
 export const HomePage = props => {
-  // const form = context.useContext()
-
-  console.log(props)
   const home = useStaticQuery(Home)
   const {
     datoCmsHome: { homeparagraph, homeheading, homeheroimage },
