@@ -34,14 +34,6 @@ export const HomePage = props => {
       <HomeWrapper id="home">
         <Overlay />
         <HeroImage homeImage fluid={homeheroimage.fluid} />
-        <HomeParagraph
-          data-sal-duration="700"
-          data-sal="fade"
-          data-sal-easing="ease-out-back"
-          light
-        >
-          {homeparagraph}
-        </HomeParagraph>
         <HomeHeading
           data-sal-duration="700"
           data-sal="fade"
@@ -50,6 +42,14 @@ export const HomePage = props => {
         >
           {homeheading}
         </HomeHeading>
+        <HomeParagraph
+          data-sal-duration="700"
+          data-sal="fade"
+          data-sal-easing="ease-out-back"
+          light
+        >
+          {homeparagraph}
+        </HomeParagraph>
       </HomeWrapper>
     </>
   )

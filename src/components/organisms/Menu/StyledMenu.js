@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes, css } from "styled-components"
 
 export const StyledMenu = styled.nav`
   position: fixed;
@@ -11,6 +11,8 @@ export const StyledMenu = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
 
   .logo {
     flex-grow: 5;
@@ -18,7 +20,13 @@ export const StyledMenu = styled.nav`
   }
 
   @media ${({ theme }) => theme.devices.mobileS} {
-    display: none;
+    /* display: none; */
+    opacity: 0;
+  }
+
+  @media ${({ theme }) => theme.devices.laptop} {
+    display: flex;
+    opacity: 1;
   }
 `
 export const MenuWrapper = styled.ul`
@@ -42,9 +50,19 @@ export const Item = styled.li`
     transform: scale(0.9);
   }
 `
+
+const open = keyframes`
+from{
+  top: -100%;
+}
+
+to{
+  top: 0;
+}
+`
 export const StyledBurgerMenu = styled.ul`
   position: absolute;
-  top: 0;
+  top: -100%;
   right: 0;
   z-index: 100;
   height: 100vh;
@@ -55,6 +73,17 @@ export const StyledBurgerMenu = styled.ul`
   align-items: center;
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.white};
+  transition: opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  ${({ isOpen }) =>
+    !isOpen &&
+    css`
+      animation: ${open} 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+    `};
+
+  @media ${({ theme }) => theme.devices.laptop} {
+    opacity: 0;
+  }
 `
 export const BurgerItem = styled.li`
   text-transform: uppercase;
@@ -71,5 +100,12 @@ export const IconWrapper = styled.div`
   z-index: 200;
   & i {
     font-size: 40px;
+    color: ${({ theme, isOpen }) =>
+      isOpen ? theme.colors.black : theme.colors.white};
+  }
+`
+export const BurgerMenuWrapper = styled.span`
+  @media ${({ theme }) => theme.devices.laptop} {
+    display: none;
   }
 `

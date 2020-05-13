@@ -19,16 +19,23 @@ export const HomeWrapper = styled.main`
 export const HomeHeading = styled(Heading)`
   position: absolute;
   z-index: 10;
-  top: 55%;
+  top: 35%;
   &::selection {
     color: ${({ theme }) => theme.colors.black};
+  }
+  @media ${({ theme }) => theme.devices.mobileS} {
+    top: 25%;
   }
 `
 
 export const HomeParagraph = styled(Paragraph)`
   position: absolute;
   z-index: 10;
-  top: 35%;
+  top: 55%;
+
+  @media ${({ theme }) => theme.devices.mobileS} {
+    display: none;
+  }
 
   &::selection {
     color: ${({ theme }) => theme.colors.black};

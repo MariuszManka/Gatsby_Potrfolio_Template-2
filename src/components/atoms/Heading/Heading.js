@@ -16,7 +16,8 @@ const Heading = styled.h1`
     (main && theme.colors.paragraph)};
 
   @media ${({ theme }) => theme.devices.mobileS} {
-    font-size: 18px;
+    font-size: 35px !important;
+    margin: 40px auto;
   }
 `
 export default Heading

@@ -12,5 +12,10 @@ const Paragraph = styled.p`
     (dark && theme.colors.black) ||
     (light && theme.colors.white) ||
     (main && theme.colors.paragraph)};
+
+  @media ${({ theme }) => theme.devices.mobileS} {
+    font-size: 25px !important;
+    margin: 40px auto;
+  }
 `
 export default Paragraph
